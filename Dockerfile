@@ -113,7 +113,6 @@ COPY --chown=ds:ds config/nginx/nginx.conf /etc/nginx/nginx.conf
 COPY --chown=ds:ds --from=ds-service \
     /usr/bin/documentserver-generate-allfonts \
     /usr/bin/documentserver-pluginsmanager \
-    /usr/bin/documentserver-admin \
     /usr/local/bin/
 COPY --from=ds-service \
     /var/www/$COMPANY_NAME/documentserver/server/dictionaries/update.py \
@@ -165,12 +164,6 @@ COPY --from=ds-service \
 COPY --from=ds-service \
     /var/www/$COMPANY_NAME/documentserver/server/FileConverter \
     /var/www/$COMPANY_NAME/documentserver/server/FileConverter
-COPY --from=ds-service \
-    /var/www/$COMPANY_NAME/documentserver/server/AdminPanel/server \
-    /var/www/$COMPANY_NAME/documentserver/server/AdminPanel/server
-COPY --chown=ds:ds --from=ds-service \
-    /var/www/$COMPANY_NAME/documentserver/server/AdminPanel/client \
-    /client
 COPY --from=ds-service \
     /var/www/$COMPANY_NAME/documentserver/server/info \
     /var/www/$COMPANY_NAME/documentserver/server/info
