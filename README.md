@@ -1,4 +1,25 @@
-﻿## Overview
+﻿## mw
+
+Forked repo to build oo images with ce version.
+
+image registry: registry.rz1.metaways.net/devops/onlyoffice
+
+## update
+1. checkout main to new oo tag. (We should base out images on a tag, not on some commit.)
+2. add tag `onlyoffice-image-<oo version>-<oo image suffix>-mw<mw counter>[-rc<rc counter>]`. eg. `onlyoffice-image-10.0.0-1-mw1`
+3. push tag
+4. ci will build and push image. the build takes  5-10min
+
+**ATTENTION**: oo dose not release all versions as ce packages. E.g.:
+* 10.0.2 dose not exists as ce, but it also dose not exists git tag. Seems to be a docker only fix.
+
+## changes:
+* add gitlab ci
+* remove copy admin panel, its not part of the ce packages 
+
+# original
+
+## Overview
 [![Multi-arch build](https://github.com/ONLYOFFICE/Docker-Docs/actions/workflows/build.yaml/badge.svg)](https://github.com/ONLYOFFICE/Docker-Docs/actions/workflows/build.yaml)
 
 ONLYOFFICE Docs is an open-source office suite that comprises all the tools you need to work with documents, spreadsheets, presentations, PDFs, and PDF forms. The suite supports office files of all popular formats (DOCX, ODT, XLSX, ODS, CSV, PPTX, ODP, etc.) and enables collaborative editing in real time.
