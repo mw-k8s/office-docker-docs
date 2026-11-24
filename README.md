@@ -2,9 +2,9 @@
 
 Forked repo to build oo images with ce version.
 
-image registry: registry.rz1.metaways.net/devops/onlyoffice
-our github mirror: https://github.com/mw-k8s/office-docker-docs
-source github repo: https://github.com/ONLYOFFICE/Docker-Docs
+* image registry: registry.rz1.metaways.net/devops/onlyoffice (requires auth)
+* our github mirror: https://github.com/mw-k8s/office-docker-docs
+* source github repo: https://github.com/ONLYOFFICE/Docker-Docs
 
 ## update
 1. checkout main to new oo tag. (We should base out images on a tag, not on some commit.)
